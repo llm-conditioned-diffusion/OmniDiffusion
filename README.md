@@ -1,16 +1,26 @@
-### Hi there 👋
+#
+This repo contains pytorch implementation, model weights, training/inference codes of our paper, click our project page for more details.
 
-<!--
-**llm-conditioned-diffusion/llm-conditioned-diffusion** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Dependencies and Installation
 
-Here are some ideas to get you started:
+## Model Weights
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Usage
+
+### Config Setting
+
+### Data Prepartion
+
+#### Data Preapartion for Alignment Training(Stage 1)
+
+#### Data Preparation for Text-to-Image Training(Stage 2 and Stage 3)
+
+### Stage 1 Training
+
+### Stage 2 Training
+
+### Stage 3 Training 
+
+### Inference
+
+## Bibtex
