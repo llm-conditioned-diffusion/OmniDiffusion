@@ -1,5 +1,5 @@
 # LLM-Conditioned Diffusion
-This repo contains pytorch implementation, model weights, training/inference codes of our paper "An Empirical Study and Analysis of Text-to-Image Generation Using Large Language Model-Powered Textual Representation", click our [project page](https://llm-conditioned-diffusion.github.io/) for more details.
+This repo contains pytorch implementation, model weights, training/inference codes of our paper "An Empirical Study and Analysis of Text-to-Image Generation Using Large Language Model-Powered Textual Representation", check our [project page](https://llm-conditioned-diffusion.github.io/) for more details.
 
 ## Dependencies and Installation
 We suggest to use Anaconda to create a virtual python environment and install the corresponding dependencies:
