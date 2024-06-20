@@ -11,7 +11,7 @@ cd llm-conditioned-diffusion
 pip install -r requirements.txt
 ```
 ## Model Weights
-
+We will upload our model weights as soon as possible.
 ## Inference
 To use our models to generate images, you need to modify and run the provided 'inference.sh', details of necessary modification are included in the script.
 Particularly, you need to prepare a .txt file that contains the prompts used as image generation guidance. we provide [a template file](./example_data/prompts.txt) as demonstration.
@@ -20,11 +20,21 @@ Particularly, you need to prepare a .txt file that contains the prompts used as 
 ### Config Setting
 #### stage 1 config
 To run the training code for stage 1, you need to specify the Chinese and English text data utilized for training (`en_train_data_path` and `cn_train_data_path`) in script `train_stage1.sh`.
+You can set one of them as empty if your training data is pure English or pure Chinese.
 #### stage 2 & stage 3 config
 To run the training code for stage 2 and stage 3, there are some hyper-parameters to modify:
-`mlm_ckpt` : model weights of the alignment adapter trained in stage-1
+
+`mlm_ckpt` : model weights of the alignment adapter trained in stage-1.
+
 `mlm_pretrained_ckpt`: model weights of the LLM text encoders, in our experiments, we use the powerful bilingual LLM [Baichuan2-7B](https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat).
-`pretrained_model_name_or_path`: model weights of [stable-diffusion-xl-base-1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0)
+
+`pretrained_model_name_or_path`: model weights of [stable-diffusion-xl-base-1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0).
+
+`high_quality_tuning`: set this as `True` if this config is used for stage 3 training, otherwise `False`.
+
+`labeling_file`: meta data, we provide an example of this in `./example_data`.
+`img_path`: the path to image files, should be consistent with the corresponding keys in the labeling_file.
+`caption_key_name`: which key in the labeling files contains the caption, default as 'short_caption'.
 ### Training Data Prepartion
 #### Data Preapartion for Alignment Training(Stage 1)
 To train the alignment adapter, you need to provide plain text data. You can supply data by providing one or multiple text files or folders containing several text files. Please ensure that your data is in plain text format, and Each line in the text file should be a separate data sample.
@@ -56,9 +66,11 @@ sh train_stage3.sh
 ```
 
 ## Bibtex
+```
 @article{tan2024empirical,
   title={An Empirical Study and Analysis of Text-to-Image Generation Using Large Language Model-Powered Textual Representation},
   author={Tan, Zhiyu and Yang, Mengping and Qin, Luozheng and Yang, Hao and Qian, Ye and Zhou, Qiang and Zhang, Cheng and Li, Hao},
   journal={arXiv preprint arXiv:2405.12914},
   year={2024}
 }
+```
