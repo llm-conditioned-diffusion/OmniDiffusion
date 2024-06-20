@@ -8,17 +8,17 @@ def load_zero_config(filename):
 
 config = EasyDict()
 
-config.mlm_ckpt = '/zju_0038/diffusion_model/models/eccv_llm_diffusion/v2_stage_2/checkpoint-14000/text_encoder_adapter/pytorch_model.bin'
-config.mlm_pretrained_ckpt = "/zju_0038/diffusion_model/models/Baichuan2-7B-Chat"
-config.pretrained_model_name_or_path = "/zju_0038/diffusion_model/models/sdxl-1.0/stable-diffusion-xl-base-1.0"
+config.mlm_ckpt = '/path/to/stage-1/adapter/pytorch_model.bin'
+config.mlm_pretrained_ckpt = "/path/to/Baichuan2-7B-Chat"
+config.pretrained_model_name_or_path = "/path/to/sdxl-1.0/stable-diffusion-xl-base-1.0"
 
 config.job_name = "/zju_0038/diffusion_model/datasets/infos/datav2_2_list.txt"
 config.task_name = "train_sdxl_with_mlm_adapter_use_cn_text"
 config.cache_dir = None
-config.output_dir = "/zju_0038/diffusion_model/models/eccv_llm_diffusion/v2_s3_a=s2_d=v2" ### change 3
+config.output_dir = "./output"
 config.local_file = True
 config.revision = None # Revision of pretrained model identifier from huggingface.co/models.
-config.unet_from_checkpoint = "/zju_0038/diffusion_model/models/eccv_llm_diffusion/v2_stage_2/checkpoint-14000/unet/pytorch_model.bin" ### change 2
+config.unet_from_checkpoint = "/path/to/sdxl-1.0/stable-diffusion-xl-base-1.0/unet/pytorch_model.bin" ### change 2
 config.resume_from_checkpoint = None
 
 config.dataset_name = None

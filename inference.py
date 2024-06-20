@@ -38,8 +38,8 @@ torch.backends.cudnn.deterministic=True
 
 model_zoo = {
     "sd-v1-5": "/cache/pretrained_model/stable-diffusion-v1-5", #pretrained model 
-    "sdxl_base": "/zju_0038/diffusion_model/models/sdxl-1.0/stable-diffusion-xl-base-1.0",
-    "sdxl_refiner": "/zju_0038/diffusion_model/models/sdxl-1.0/stable-diffusion-xl-refiner-1.0/",
+    "sdxl_base": "/cache/pretrained_model/sdxl-1.0/stable-diffusion-xl-base-1.0",
+    "sdxl_refiner": "/cache/pretrained_model/sdxl-1.0/stable-diffusion-xl-refiner-1.0/",
     "floyd_stage_1": "/cache/pretrained_model/IF-I-XL-v1.0",
     "floyd_stage_2": "/cache/pretrained_model/IF-II-L-v1.0",
 }
