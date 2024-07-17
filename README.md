@@ -13,9 +13,9 @@ pip install -r requirements.txt
 ## Model Weights of OmniDiffusion
 Model weights can be download from [huggingface](https://huggingface.co/Fudan-FUXI/llm-conditioned-diffusion-v1.0), we provide model weights trained after stage 1, stage 1 + stage 2, and stage 1 + stage 2 + stage 3, arrebeviated as stage 1, stage 2, and stage 3, respectively.
 ## Inference
-To use our models to generate images, you need to modify and run the provided 'inference.sh', details of necessary modification are included in the script.
+To use our models to generate images, you need to modify and run the provided `inference.sh`, details of necessary modification are included in the script.
 Particularly, you need to prepare a .txt file that contains the prompts used as image generation guidance. we provide [a template file](./example_data/prompts.txt) as demonstration.
-
+`inference.sh` provides two parameters, `unet` and `text_adapter`, for setting the path of OmniDiffusion. You can just setting them as the unet_ema and text_adapter from these  two checkpoints: [stage 1 + stage 2](https://huggingface.co/Fudan-FUXI/llm-conditioned-diffusion-v1.0/tree/main/stage-2) and [stage 1 + stage 2 + stage 3](https://huggingface.co/Fudan-FUXI/llm-conditioned-diffusion-v1.0/tree/main/stage-3).
 ## Training
 ### Config Setting
 #### stage 1 config
